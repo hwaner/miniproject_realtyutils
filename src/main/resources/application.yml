@@ -1,0 +1,15 @@
+# 메모리 데이터베이스(h2) 접근하는 세팅
+spring:
+  jpa:
+    database: h2
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    hikari:
+      driverClassName: org.h2.Driver
+      username: sa
+      password: sa
+      jdbc-url: jdbc:h2:mem:testdb
+  sql:
+    init:
+      mode: always
